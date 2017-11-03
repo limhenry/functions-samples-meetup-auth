@@ -1,0 +1,13 @@
+{
+  "name": "spotify-auth-functions",
+  "description": "Authenticate with Spotify Firebase Functions sample",
+  "dependencies": {
+    "cookie-parser": "^1.4.3",
+    "firebase-admin": "^4.1.1",
+    "firebase-functions": "^0.5.1",
+    "request": "^2.74.0",
+    "request-promise-native": "^1.0.3",
+    "simple-oauth2": "^1.0.0"
+  },
+  "private": true
+}
