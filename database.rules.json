@@ -1,6 +1,6 @@
 {
     "rules": {
-      "spotifyAccessToken": {
+      "meetupAccessToken": {
         "$uid": {
           ".read": "auth.uid === $uid",
           ".write": "auth.uid === $uid"
