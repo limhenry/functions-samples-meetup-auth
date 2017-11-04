@@ -53,7 +53,7 @@ Please wait...
     document.body.innerText = 'Error back from the Meetup auth page: ' + error;
   } else if(!code) {
     // Start the auth flow.
-    window.location.href  = 'http://localhost:5001/admin-gdgkl/us-central1/redirect';
+    window.location.href  = 'https://us-central1-' + getFirebaseProjectId() + '.cloudfunctions.net/redirect';
   } else {
     // Use JSONP to load the 'token' Firebase Function to exchange the auth code against a Firebase custom token.
     const script = document.createElement('script');
@@ -61,7 +61,7 @@ Please wait...
     // This is the URL to the HTTP triggered 'token' Firebase Function.
     // See https://firebase.google.com/docs/functions.
     
-    var tokenFunctionURL = 'http://localhost:5001/admin-gdgkl/us-central1/token';
+    var tokenFunctionURL = 'https://us-central1-' + getFirebaseProjectId() + '.cloudfunctions.net/token';
     script.src = tokenFunctionURL +
         '?code=' + encodeURIComponent(code) +
         '&state=' + encodeURIComponent(state) +
